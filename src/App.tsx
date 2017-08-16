@@ -4,7 +4,7 @@ import { Header } from './components/header';
 import { Main } from './components/main';
 import { Footer } from './components/footer';
 
-interface Todo {
+export interface Todo {
   completed: boolean;
   item: string;
 }
@@ -36,7 +36,7 @@ class App extends React.Component<{}, AppState> {
     return (
       <section className="todoapp">
         <Header addToDo={this.addToDo}/>
-        <Main />
+        <Main todos={this.state.todos}/>
         <Footer />
       </section>
     );
